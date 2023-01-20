@@ -21,3 +21,182 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+
+.undotted {
+  list-style-type: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+
+.btn {
+  border: none;
+  background: #95459a;
+}
+
+/* popup */
+
+.popup {
+  display: none;
+  top: 25%;
+  left: 30%;
+  position: absolute;
+  z-index: 1;
+}
+
+.open {
+  display: flex;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(125, 151, 218, 0.8);
+}
+
+.popup__wr {
+  display: flex;
+  z-index: 3;
+}
+
+.close {
+  background: none;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-repeat: no-repeat;
+  background-image: url('../img/cls.svg');
+}
+
+.close:hover {
+  opacity: 0.5;
+}
+
+.close:active {
+  opacity: 0.2;
+}
+
+.contact__form {
+  margin: auto;
+  max-width: 780px;
+  background: #eeeeee;
+  padding: 50px 100px;
+}
+
+.column__two-input {
+  display: flex;
+  max-width: 580px;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.label__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__label {
+  margin-bottom: 6px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #6b6a6a;
+}
+
+.contact__input {
+  width: 280px;
+  height: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.contact__input::placeholder {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding-left: 10px;
+  color: #797979;
+}
+
+.contact__input-email {
+  width: 100%;
+  height: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.contact__payment {
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.contact__payment-title {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #6b6a6a;
+}
+
+.contact__payment__list {
+  display: flex;
+  gap: 33px;
+}
+
+.contact__payment-method {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.contact__payment-input {
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+}
+
+.contact__payment-label {
+  margin-left: 25px;
+}
+
+.contact__payment-label::before {
+  content: "";
+  cursor: pointer;
+  width: 21px;
+  height: 21px;
+  margin-left: -25px;
+  position: absolute;
+  background-image: url("../img/icon/squr.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact__payment-input:checked + .contact__payment-label::before {
+  content: "";
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/icon/ch.png");
+}
