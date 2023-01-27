@@ -1,4 +1,4 @@
-.link__info {
+.btn {
     text-transform: uppercase;
     padding: 11px 40px;
     max-width: max-content;
@@ -7,5 +7,5 @@
     border: none;
     line-height: 18px;
     color: #ffffff;
-    background: #008752;
+    background: $color-link;
 }

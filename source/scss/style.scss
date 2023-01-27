@@ -5,7 +5,6 @@
   Import vendor libraries
 */
 @import "vendor/_normalize";
-
 /*
   Import utils classes and base styles
 */
@@ -38,56 +37,41 @@
   Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен,
   то он должен был бы быть в файле _blocks/coming-soon.scss
 */
-
 .banner {
-  background-image: url(../img/banner.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color:  #DAE2E5;
-  padding: 0 0 286px;
-  margin-bottom: 80px;
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:  #DAE2E5;
+    margin-top: 80px;
+    padding: 0 0 286px;
+    &__title {
+      @include lato;
+      font-size: 60px;
+    }
+  }
+
+.servises {
+  &__subtitle {
+    @include lato;
+    text-align: center;
+    padding-top: 0;
+  }
+  &__list {
+    display: flex;
+  }
 }
 
-.title {
-  font-family: 'Lato', sans-serif;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 90px;
-  line-height: 100%;
-  color: #00559D;
-  padding-top: 143px;
-  width: 90%;
-
-}
-
-.subtitle {
-  font-family: 'Lato', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 42px;
-  text-align: center;
-  line-height: 50px;
-  text-transform: uppercase;
-  color: #00559D;
-}
-
-.category__list {
-  display: flex;
-}
-
-.about-us {
+.about {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #00559D;
   margin-top: 50px;
   margin-bottom: 50px;
-}
-
-.about__title {
-  color: #DAE2E5;
-}
-
-.about__text {
-  color: #DAE2E5;
+  &__title {
+    color: #DAE2E5;
+  }
+  &__text {
+    color: #DAE2E5;
+  }
 }

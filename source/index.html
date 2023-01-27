@@ -26,13 +26,13 @@
     <main class="main">
       <section class="banner">
         <div class="container">
-          <h1 class="title">The world’s leading cleaning company</h1>
-          <button type="button" aria-label="Open modal window" class="btn link__info btn__js">Get a Free Estimate</button>
+          <h1 class="banner__title">The world’s leading cleaning company</h1>
+          @@include('blocks/btn.html')
         </div>
       </section>
-      <section class="container">
-        <h2 class="subtitle">OUR MOST POPULAR SERVICES</h2>
-        <ul class="category__list">
+      <section class="servises container">
+        <h2 class="servises__subtitle">OUR MOST POPULAR SERVICES</h2>
+        <ul class="servises__list">
           @@include('blocks/category.html',{
             "img": "img/servises.jpg",
             "text": "Lorem ipsum dolor sit amet.",
@@ -41,14 +41,16 @@
             "img": "img/servisesOne.jpg",
             "text": "Lorem ipsum dolor sit amet.",
           })
-          @@include('blocks/category.html')
-          @@include('blocks/category.html')
+          @@include('blocks/category.html',{
+            "img": "img/servisesOne.jpg",
+            "text": "Lorem ipsum dolor sit amet.",
+          })
+          @@include('blocks/category.html',{
+            "img": "img/servisesOne.jpg",
+            "text": "Lorem ipsum dolor sit amet.",
+          })
         </ul>
       </section>
-      <div class="container about-us">
-        <h2 class="about__title">Title</h2>
-        <p class="about__text">Lorem ipsum dolor sit amet.</p>
-      </div>
       <section class="container">
         <div>
           <h2>Why Haley’s Chem-Dry?</h2>

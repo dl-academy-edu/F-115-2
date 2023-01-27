@@ -6,45 +6,35 @@
     margin-top: 23px;
     margin-bottom: 33px;
     align-items: center;
+    &__logo {
+      margin-right: 25px;
+      &:hover {
+        opacity: 0.6;
+      }
+      &:active {
+        opacity: 0.2;
+      }
+    }
     &__nav {
       display: flex;
     }
-  }
-  
-  .header__list {
-    display: flex;
+    &__list {
+      display: flex;
+      &-link {
+        font-size: 16px;
+        line-height: 20px;
+        color: #333333;
+        margin-right: 15px;
+      }
+    }
+    &__phone {
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 20px;
+      color: #95459a;
+    }
   }
   
   .left {
     margin-right: auto;
-  }
-  
-  .header__logo {
-    margin-right: 25px;
-  }
-  
-  .header::after {
-    content: 'Hello';
-  }
-  
-  .header__logo:hover {
-    opacity: 0.6;
-  }
-  
-  .header__logo:active {
-    opacity: 0.2;
-  }
-  
-  .header__list-link {
-    font-size: 16px;
-    line-height: 20px;
-    color: #333333;
-    margin-right: 15px;
-  }
-  
-  .header__phone {
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 20px;
-    color: #95459a;
   }
