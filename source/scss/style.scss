@@ -14,7 +14,7 @@
 /*
   Import all other blocks
 */
-
+@import "fonts";
 @import "_blocks/container";
 @import "_blocks/header";
 @import "_blocks/footer";
@@ -37,6 +37,108 @@
   Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен,
   то он должен был бы быть в файле _blocks/coming-soon.scss
 */
+
+.chat {
+  background: #ffffff;
+  width: 300px;
+  height: 588px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  position: fixed;
+  &__head {
+    background: #F6F6F8;
+    padding: 5px;
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #BCBCBE;
+  }
+  &__title {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #27253F;
+  }
+  &__subtitle {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #6B6A6A;
+  }
+  &__cross {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    border: none;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/icon/back-button.svg);
+  }
+  &__message {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    &-content {
+      animation: chat ease 6s forwards;
+      max-height: 0;
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i + 1s;
+        }
+      }
+    }
+    
+    &-right {
+      background: #2198F4;
+      color: #ffffff;
+      padding: 8px 10px;
+      margin: 0 15px 15px auto;
+      border-radius: 10px;
+      max-width: 180px;
+      &::after {
+        content: "";
+        background: url(../img/icon/blue-tail.png) no-repeat;
+        display: block;
+        position: absolute;
+        right: 11px;
+        width: 11px;
+        height: 11px;
+        background-size: 100%;
+      }
+    }
+    &-left {
+      background: #E4E3E8;
+      border-radius: 10px;
+      color: #27253F;
+      padding: 8px 10px;
+      margin: 0 auto 15px 15px;
+      max-width: 180px;
+      &::after {
+        content: "";
+        background: url(../img/icon/grey-tail.png) no-repeat;
+        display: block;
+        position: absolute;
+        left: 11px;
+        width: 11px;
+        height: 11px;
+        background-size: 100%;
+      }
+    }
+  }
+}
+
+@keyframes chat {
+  0% {
+    max-height: 0%;
+  }
+  100% {
+    max-height: 100%;
+  }
+}
 .banner {
     background-image: url(../img/banner.png);
     background-repeat: no-repeat;

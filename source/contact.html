@@ -22,46 +22,13 @@
         <!-- endbuild -->
       </head>
 <body>
-    @@include('blocks/header.html')
+    @@include('blocks/header.html',{
+        "pl": "Ivan Ivanov",
+      })
       <main>
         <section class="container contact">
             <h1 class="title">Contact Us</h1>
-            <form method="post" action="#" class="contact__form">
-                <div class="column__two-input">
-                    <div class="label__wrapper">
-                        <label class="contact__label" for="Name">Name</label>
-                        <input class="contact__input" id="Name" type="text" placeholder="Ivan Ivanov">
-                    </div>
-                    <div class="label__wrapper">
-                        <label class="contact__label" for="">Phone</label>
-                        <input class="contact__input" type="tel">
-                    </div>
-                </div>
-                <div class="label__wrapper">
-                    <label class="contact__label" for="">Email</label>
-                    <input class="contact__input-email" type="email">
-                </div>
-                <fieldset class="contact__payment">
-                    <legend class="contact__payment-title">Payment method</legend>
-                    <ul class="contact__payment__list">
-                        <li class="contact__payment-method undotted">
-                            <input class="contact__payment-input" id="cash" type="radio" name="payment">
-                            <label class="contact__payment-label" for="cash">Cash</label>
-                        </li>
-                        <li class="contact__payment-method undotted">
-                            <input class="contact__payment-input" id="Credit" type="radio" name="payment">
-                            <label class="contact__payment-label" for="Credit">Credit card</label>
-                        </li>
-                        <li class="contact__payment-method undotted">
-                            <input class="contact__payment-input" id="Receipt" type="radio" name="payment">
-                            <label class="contact__payment-label" for="Receipt">Receipt</label>
-                        </li>
-                    </ul>
-                </fieldset>
-                <label class="contact__label" for="textarea">Message</label>
-                <textarea class="contact__area" name="" id="textarea" cols="30" rows="10" ></textarea>
-                <button class="link__info" type="submit">submit</button>
-            </form>
+            @@include('blocks/form.html')
         </section>
         <div class="background">
             <div class="container content">

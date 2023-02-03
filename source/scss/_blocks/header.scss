@@ -8,6 +8,7 @@
     align-items: center;
     &__logo {
       margin-right: 25px;
+      transition: 0.4s;
       &:hover {
         opacity: 0.6;
       }

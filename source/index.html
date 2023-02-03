@@ -22,7 +22,34 @@
     <!-- endbuild -->
   </head>
   <body>
-    @@include('blocks/header.html')
+
+    <div class="chat">
+      <div class="chat__head">
+        <p class="chat__title">ChemDry Chat</p>
+        <p class="chat__subtitle">Chat with an anonymous person</p>
+        <button class="chat__cross"></button>
+      </div>
+      <div class="chat__message">
+        <div class="chat__message-content">
+          <p class="chat__message-right">Oh, you better not know, since we are learning a very complicated topic on how to create cool animations in CSS.</p>
+        </div>
+        <div class="chat__message-content">
+          <p class="chat__message-left">Cool! Can you teach me too?</p>
+        </div>
+        <div class="chat__message-content">
+          <p class="chat__message-right">No, I won’t just teach you, come to us for courses at DL Academy and then you will not be taught this!</p>
+        </div>
+        <div class="chat__message-content">
+          <p class="chat__message-left">Damn, I was hoping so, well, I’ll start walking soon, see you!</p>
+        </div>
+        <div class="chat__message-content">
+          <p class="chat__message-right">Good, all the best.</p>
+        </div>
+      </div>
+    </div>
+    @@include('blocks/header.html',{
+      "img": "img/icon/logo.svg",
+    }))
     <main class="main">
       <section class="banner">
         <div class="container">
@@ -81,31 +108,7 @@
     </main> 
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.537027345575!2d49.28883502508566!3d53.512465281983786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416879a82611632d%3A0xb18d94ffcf91e387!2zREwgQWNhZGVteSDigJQg0LrRg9GA0YHRiyDQv9GA0L7Qs9GA0LDQvNC80LjRgNC-0LLQsNC90LjRjw!5e0!3m2!1sru!2sru!4v1668783377206!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     @@include('blocks/footer.html')
-    <div class="popup">
-      <div class="popup__wr">
-        <form method="post" action="#" class="contact__form">
-          <div class="column__two-input">
-              <div class="label__wrapper">
-                  <label class="contact__label" for="Name">Name</label>
-                  <input class="contact__input" id="Name" type="text" placeholder="Ivan Ivanov">
-              </div>
-              <div class="label__wrapper">
-                  <label class="contact__label" for="">Phone</label>
-                  <input class="contact__input" type="tel">
-              </div>
-          </div>
-          <div class="label__wrapper">
-              <label class="contact__label" for="">Email</label>
-              <input class="contact__input-email" type="email">
-          </div>
-          <label class="contact__label" for="textarea">Message</label>
-          <textarea class="contact__area" name="" id="textarea" cols="30" rows="10" ></textarea>
-          <button class="link__info" type="submit">submit</button>
-        </form>
-        <button type="button" class="close"></button>
-      </div>
-      <div class="overlay"></div>
-    </div>
+    @@include('blocks/popup.html')
     <script src="js/app.js" defer></script>
     <script src="js/popup.js"></script>
   </body>
