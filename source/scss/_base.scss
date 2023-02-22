@@ -31,10 +31,16 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .undotted {
   list-style-type: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 label {
@@ -196,4 +202,19 @@ label {
   width: 21px;
   height: 21px;
   background-image: url("../img/icon/ch.png");
+}
+
+.link__info {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: #eeeeee;
+  padding: 11px 40px;
+  background: #008752;
+}
+
+.link__info--hidden {
+  @media (max-width: 860px) {
+    display: none;
+  }
 }

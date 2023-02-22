@@ -6,6 +6,9 @@
     margin-top: 23px;
     margin-bottom: 33px;
     align-items: center;
+    @media (max-width: 768px) {
+      margin-bottom: 0px;
+    }
     &__logo {
       margin-right: 25px;
       transition: 0.4s;
@@ -38,4 +41,7 @@
   
   .left {
     margin-right: auto;
+    @media (max-width: 860px) {
+      display: none;
+    }
   }

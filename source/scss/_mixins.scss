@@ -20,6 +20,7 @@
     display: table;
   }
 }
+
 @mixin lato {
   font-family: 'Lato', sans-serif;
   font-style: normal;
@@ -28,5 +29,4 @@
   line-height: 100%;
   color: #00559D;
   padding-top: 143px;
-  width: 90%;
 }

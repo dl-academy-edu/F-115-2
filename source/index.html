@@ -23,7 +23,11 @@
   </head>
   <body>
 
-    <div class="chat">
+    <!-- <svg class="svg" width="80" height="120" viewBox="0 0 80 80">
+      <rect x="0" y="10" width="80" height="70" rx="5" ry="5" fill="#2198F4" class="rect"/>
+      <circle r="29" cx="40" cy="30" fill="#F0C419" class="circle"/>
+    </svg> -->
+    <!-- <div class="chat">
       <div class="chat__head">
         <p class="chat__title">ChemDry Chat</p>
         <p class="chat__subtitle">Chat with an anonymous person</p>
@@ -46,10 +50,10 @@
           <p class="chat__message-right">Good, all the best.</p>
         </div>
       </div>
-    </div>
+    </div> -->
     @@include('blocks/header.html',{
       "img": "img/icon/logo.svg",
-    }))
+    })
     <main class="main">
       <section class="banner">
         <div class="container">
@@ -79,6 +83,14 @@
         </ul>
       </section>
       <section class="container">
+        <div class="grid">
+          <div class="grid__box grid__box1">#A322F1</div>
+          <div class="grid__box grid__box2">#C4C4C4</div>
+          <div class="grid__box grid__box3">#22CCF1</div>
+          <div class="grid__box grid__box4">#F19E22</div>
+          <div class="grid__box grid__box5">#008752</div>
+          <div class="grid__box grid__box6">#EF6A6A</div>
+        </div>
         <div>
           <h2>Why Haley’s Chem-Dry?</h2>
           <p>
@@ -90,9 +102,14 @@
             in your home when a sanitizer is added.* Plus, our green-certified
             solution, The Natural®, contains no soaps or detergents so it’s safe
             and non-toxic for your family and pets.
-          </p> 
+          </p>
           <a href="#" class="link__info">Learn more</a>
         </div>
+        <picture>
+          <source srcset="./img/tablet.jpg, ./img/tablet-2x.jpg 2x"
+          media="(max-width: 768px)">
+          <img src="./img/main.jpg" alt="Chem-Dry mission">
+        </picture>
         <img src="./img/teamCleanHome.jpg" alt="Chem-Dry mission" width="580" height="430">
       </section>
       <section class="container">
@@ -106,6 +123,7 @@
         </ul>
       </section>
     </main> 
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aed0b3c3d19bd5a925cbf0b542788987c3bd8cc4bd92850401489017d5e06f939&amp;source=constructor" width="566" height="464" frameborder="0"></iframe>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.537027345575!2d49.28883502508566!3d53.512465281983786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416879a82611632d%3A0xb18d94ffcf91e387!2zREwgQWNhZGVteSDigJQg0LrRg9GA0YHRiyDQv9GA0L7Qs9GA0LDQvNC80LjRgNC-0LLQsNC90LjRjw!5e0!3m2!1sru!2sru!4v1668783377206!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     @@include('blocks/footer.html')
     @@include('blocks/popup.html')
