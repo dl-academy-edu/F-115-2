@@ -38,10 +38,31 @@
       color: #95459a;
     }
   }
-  
   .left {
     margin-right: auto;
     @media (max-width: 860px) {
       display: none;
+    }
+  }
+
+  
+.btn-hid {
+  display: none;
+  @media (max-width: $media-tablet) {
+    display: block;
+  }
+}
+
+  .burger {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #EEEEEE;
+    transform: translateX(-1000px);
+    transition: .4s;
+    &__open {
+      display: block;
+      transform: translateX(0);
     }
   }

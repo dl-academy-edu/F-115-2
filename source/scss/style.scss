@@ -283,10 +283,3 @@
     color: #DAE2E5;
   }
 }
-
-.btn-hid {
-  display: none;
-  @media (max-width: $media-tablet) {
-    display: block;
-  }
-}

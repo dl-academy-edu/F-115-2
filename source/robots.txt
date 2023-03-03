@@ -3,3 +3,4 @@
 # Disallow all content
 User-agent: *
 Disallow: /
+/contact.html
